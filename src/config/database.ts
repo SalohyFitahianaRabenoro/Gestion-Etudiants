@@ -1,4 +1,4 @@
-import { Pool } from "../../node_modules/@types/pg";
+import { Pool } from "pg";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -12,15 +12,10 @@ const pool = new Pool({
 });
 
 export const testConnection = async (): Promise<void> => {
-
     try {
-
         await pool.query("SELECT NOW()");
-
         console.log("Connexion à PostgreSQL réussie !");
-
     } catch (error) {
-
         console.error(
             "Erreur de connexion à PostgreSQL :",
             error
