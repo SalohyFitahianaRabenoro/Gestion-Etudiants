@@ -1,7 +1,10 @@
 import { Router } from "express";
 import etudiantController from "../controller/EtudiantController";
+import { authMiddleware } from "../middleware/authMiddleware";
 
 const router = Router();
+
+router.use(authMiddleware);
 
 router.get("/", etudiantController.getAll);
 
