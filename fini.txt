@@ -1,0 +1,8 @@
+Jwt:
+-creation du table pour les users
+-modification de env
+-creation de autController
+-cration de user.ts
+-creation de authService
+branche créée : feature/jwt-auth
+.env retiré de l’index Git tout en restant présent localement
