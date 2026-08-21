@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "tsx watch server.ts",
     "build": "tsc",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
     "start": "node dist/server.js"
   },
   "keywords": [],

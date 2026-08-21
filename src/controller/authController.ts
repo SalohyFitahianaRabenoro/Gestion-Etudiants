@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import authService from "../service/authService";
+import { authMiddleware } from "../middleware/authMiddleware";
 
 class AuthController {
 
@@ -36,6 +37,10 @@ class AuthController {
             res.status(status).json({ message });
         }
     };
+
+    me = [authMiddleware, (req: Request, res: Response): void => {
+        res.status(200).json({ user: req.user });
+    }];
 }
 
 export default new AuthController();

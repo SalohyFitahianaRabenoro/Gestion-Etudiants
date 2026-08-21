@@ -6,8 +6,10 @@
     "outDir": "dist",
     "esModuleInterop": true,
     "strict": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["frontend"]
 }
 
 //https://github.com/SalohyFitahianaRabenoro/Gestion-Etudiants.git

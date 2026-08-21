@@ -20,6 +20,7 @@ export const testConnection = async (): Promise<void> => {
             "Erreur de connexion à PostgreSQL :",
             error
         );
+        throw new Error("Connexion à PostgreSQL impossible");
     }
 };
 
